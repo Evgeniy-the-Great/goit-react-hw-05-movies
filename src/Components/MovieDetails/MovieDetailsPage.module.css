@@ -1,0 +1,86 @@
+.box {
+  display: flex;
+  margin-left: 20px;
+}
+
+.goBackBtn {
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  border-radius: 5px;
+  background-color: lightgrey;
+}
+
+.goBackBtn:hover {
+  background-color: lightpink;
+  color: antiquewhite;
+}
+
+.motieDescription {
+  margin-left: 20px;
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+.voteAverage {
+  margin-bottom: 10px;
+}
+
+.voteAverageTitle {
+  font-weight: 700;
+}
+
+.voteAverageText {
+  color: red;
+  font-weight: 500;
+}
+
+.overviewTitle {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.overviewText {
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.genresTitle {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.genresList {
+  display: flex;
+}
+
+.genrItem {
+  margin-right: 15px;
+}
+
+.additionalTitle {
+  margin-left: 20px;
+}
+
+.additionalList {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.additionaItem {
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+.additionaText {
+  color: black;
+  text-decoration: none;
+}
+
+.additionaTextActive {
+  color: red;
+}

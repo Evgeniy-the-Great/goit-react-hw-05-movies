@@ -1,15 +1,22 @@
-import React from 'react';
-import { Route, Switch } from 'react-router';
-import MovieDetailsPage from '../../pages/MovieDetailsPage/MovieDetailsPage';
+import React, { Suspense, lazy } from 'react';
+import { Route, Switch, Redirect } from 'react-router';
 import { mainRoutes } from '../routes/mainRoutes';
+
 const Main = () => {
   return (
-    <Switch>
-      <Route path="/movies/:movieId" component={MovieDetailsPage} exact />
-      {mainRoutes.map(({ path, component, exact }) => (
-        <Route key={path} path={path} component={component} exact={exact} />
-      ))}
-    </Switch>
+    <Suspense fallback={<h2>Loading...</h2>}>
+      <Switch>
+        <Route
+          path="/movies/:movieId"
+          component={lazy(() => import('../MovieDetails/MovieDetails'))}
+          exact={false}
+        />
+        {mainRoutes.map(({ path, component, exact }) => (
+          <Route key={path} path={path} component={component} exact={exact} />
+        ))}
+        <Redirect to="/" />
+      </Switch>
+    </Suspense>
   );
 };
 

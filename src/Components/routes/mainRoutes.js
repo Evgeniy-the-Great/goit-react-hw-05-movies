@@ -1,17 +1,16 @@
-import Home from '../../pages/Home';
-import Movies from '../../pages/Movie';
+import { lazy } from 'react';
 
 export const mainRoutes = [
   {
     name: 'Home',
     path: '/',
-    component: Home,
+    component: lazy(() => import('../../pages/home/Home')),
     exact: true,
   },
   {
     name: 'Movies',
     path: '/movies',
-    component: Movies,
-    exact: true,
+    component: lazy(() => import('../../pages/Movie')),
+    exact: false,
   },
 ];

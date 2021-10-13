@@ -1,0 +1,19 @@
+.navList {
+  display: flex;
+  padding: 20px;
+}
+
+.navItem {
+  margin-right: 20px;
+}
+
+.navLink {
+  /* text-transform: uppercase; */
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navLinkActive {
+  color: red;
+}
