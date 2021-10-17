@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { getMovieCast } from '../../api-servise';
+import { getMovieCast } from '../api-servise';
 import style from './Cast.module.css';
-import plug from '../../../image/photo-not-available.jpg';
+import plug from '../../image/photo-not-available.jpg';
+
 const Cast = ({ match }) => {
   const [cast, setCast] = useState([]);
   const movieId = match.params.movieId;

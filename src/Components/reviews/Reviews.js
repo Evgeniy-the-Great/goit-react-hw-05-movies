@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getMovieReviews } from '../../api-servise';
+import { getMovieReviews } from '../api-servise';
 import style from './Reviews.module.css';
 
 const Reviews = ({ match }) => {

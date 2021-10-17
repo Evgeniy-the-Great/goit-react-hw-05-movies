@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Suspense } from 'react';
 import { Switch, Route, useHistory, useLocation } from 'react-router';
 import { NavLink } from 'react-router-dom';
-import { getMovieByID } from '../api-servise';
-import { addisionalRoutes } from '../routes/addisionalRoutes';
+import { getMovieByID } from '../../Components/api-servise';
+import MovieRender from '../../Components/movieRender/MovieRender';
+import { addisionalRoutes } from '../../Components/routes/addisionalRoutes';
 import style from './MovieDetailsPage.module.css';
 
 const MovieDetailsPage = ({ match }) => {
@@ -39,35 +40,11 @@ const MovieDetailsPage = ({ match }) => {
           &#8592; Go Back
         </button>
       </div>
-      <div className={style.box}>
-        <img
-          className={style.img}
-          src={fullPath}
-          alt={movie.title || movie.original_title}
-          width="200"
-        />
-        <div className={style.motieDescription}>
-          <h2 className={style.title}>
-            {movie.title || movie.original_title} ({releaseDate})
-          </h2>
-          <p className={style.voteAverage}>
-            <span className={style.voteAverageTitle}>Vote average: </span>
-            <span className={style.voteAverageText}>{movie.vote_average} </span>
-            / 10
-          </p>
-          <p className={style.overviewTitle}>Overview</p>
-          <p className={style.overviewText}>{movie.overview}</p>
-          <p className={style.genresTitle}>Genres</p>
-          <ul className={style.genresList}>
-            {movie.genres &&
-              movie.genres.map(genr => (
-                <li key={genr.name} className={style.genrItem}>
-                  {genr.name}
-                </li>
-              ))}
-          </ul>
-        </div>
-      </div>
+      <MovieRender
+        fullPath={fullPath}
+        releaseDate={releaseDate}
+        movie={movie}
+      />
       <div>
         <h3 className={style.additionalTitle}>Additional information</h3>
         <ul className={style.additionalList}>

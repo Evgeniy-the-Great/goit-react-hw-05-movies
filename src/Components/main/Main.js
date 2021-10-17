@@ -8,7 +8,9 @@ const Main = () => {
       <Switch>
         <Route
           path="/movies/:movieId"
-          component={lazy(() => import('../MovieDetails/MovieDetails'))}
+          component={lazy(() =>
+            import('../../pages/MovieDetails/MovieDetails'),
+          )}
           exact={false}
         />
         {mainRoutes.map(({ path, component, exact }) => (

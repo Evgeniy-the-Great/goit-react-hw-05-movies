@@ -1,0 +1,37 @@
+.goBackBtn {
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  border-radius: 5px;
+  background-color: lightgrey;
+}
+
+.goBackBtn:hover {
+  background-color: lightpink;
+  color: antiquewhite;
+}
+
+.additionalTitle {
+  margin-left: 20px;
+}
+
+.additionalList {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.additionaItem {
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+.additionaText {
+  color: black;
+  text-decoration: none;
+}
+
+.additionaTextActive {
+  color: red;
+}
